@@ -12,8 +12,9 @@ import { graphql, Link } from 'gatsby';
 export default class postLayout extends Component {
   render() {
     const { markdownRemark } = this.props.data;
+    const { location } = this.props;
     return (
-      <Layout>
+      <Layout location={location}>
         <div>
           <h1>{markdownRemark.frontmatter.title}</h1>
           <div
